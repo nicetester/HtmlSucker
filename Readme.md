@@ -1,7 +1,11 @@
 ## HtmlSucker ##
 
 HtmlSucker 是一个用来从一个网页中提取文章信息的小工具包，例如从网页中提取文章标题、作者、发布时间、
-封面图以及文章正文内容。
+封面图以及文章正文内容。基于 [jsoup](https://www.oschina.net/p/jsoup) 库进行 HTML 解析。
+
+HtmlSucker 提取文章正文的原理：分析整个 HTML 文档的所有节点，提取其中包含最多文字的的连续节点。
+
+本项目部分代码参考 [Crux](https://www.oschina.net/p/crux-web) 项目，例如 HeuristicString 类。
 
 示例代码：
 
