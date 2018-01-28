@@ -8,12 +8,85 @@
     <artifactId>HtmlSucker</artifactId>
     <version>0.0.1</version>
 
+     <name>HtmlSucker</name>
+    <description>HtmlSucker used to parse article content from html</description>
+    <url>https://gitee.com/ld/HtmlSucker</url>
+
+    <licenses>
+        <license>
+            <name>WTFPL</name>
+            <url>https://zh.wikipedia.org/zh-hans/WTFPL</url>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:git@gitee.com:ld/HtmlSucker.git</connection>
+        <developerConnection>scm:git:git@gitee.com:ld/HtmlSucker.git</developerConnection>
+        <url>git@gitee.com:ld/HtmlSucker.git</url>
+    </scm>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>snapshot</id>
+            <name>HtmlSucker SnapShot</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>release</id>
+            <name>HtmlSucker Release</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <build>
         <plugins>
+
+            <!-- Source -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- Javadoc -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.9.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- GPG -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.5</version>
+                <executions>
+                    <execution>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -63,5 +136,12 @@
         </dependency>
 
     </dependencies>
+
+    <developers>
+        <developer>
+            <name>Winter Lau</name>
+            <email>javayou@gmail.com</email>
+        </developer>
+    </developers>
 
 </project>
