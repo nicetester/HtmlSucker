@@ -7,7 +7,7 @@ HtmlSucker 提取文章正文的原理：分析整个 HTML 文档的所有节点
 
 本项目部分代码参考 [Crux](https://www.oschina.net/p/crux-web) 项目，例如 HeuristicString 类。
 
-Maven（尚未发布）:
+Maven:
 
 ```
 <dependency>
