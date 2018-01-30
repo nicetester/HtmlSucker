@@ -11,7 +11,7 @@ Maven（尚未发布）:
 
 ```
 <dependency>
-    <groupId>net.oschina.html</groupId>
+    <groupId>net.oschina.htmlsucker</groupId>
     <artifactId>HtmlSucker</artifactId>
     <version>0.0.1</version>
 </dependency>
